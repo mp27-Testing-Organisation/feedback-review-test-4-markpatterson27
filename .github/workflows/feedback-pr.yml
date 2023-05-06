@@ -14,4 +14,4 @@ jobs:
       - run: |
           gh api -X PUT /repos/${{ github.event.organization.login }}/${{ github.event.repository.name }}/branches/feedback/protection -F required_pull_request_reviews[required_approving_review_count]=1 -F required_conversation_resolution=true -F enforce_admins=null -F required_status_checks=null -F restrictions=null
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPOSCOPE }}
